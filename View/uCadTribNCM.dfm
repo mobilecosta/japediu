@@ -1,0 +1,1814 @@
+object frmCadTribNcm: TfrmCadTribNcm
+  Left = 0
+  Top = 0
+  BorderStyle = bsDialog
+  Caption = 'Cadastro Tributa'#231#227'o Por NCM'
+  ClientHeight = 565
+  ClientWidth = 738
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  TextHeight = 13
+  object pnlFundo: TPanel
+    Left = 0
+    Top = 0
+    Width = 738
+    Height = 471
+    Align = alClient
+    TabOrder = 0
+    ExplicitWidth = 734
+    ExplicitHeight = 470
+    object pnlTopo: TPanel
+      Left = 1
+      Top = 1
+      Width = 736
+      Height = 104
+      Align = alTop
+      TabOrder = 0
+      ExplicitWidth = 732
+      object Label70: TLabel
+        Left = 7
+        Top = 11
+        Width = 67
+        Height = 15
+        Alignment = taRightJustify
+        Caption = 'F4| Localizar '
+        Color = clSilver
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object edtNCM: TEdit
+        Left = 15
+        Top = 32
+        Width = 666
+        Height = 23
+        CharCase = ecUpperCase
+        Color = clWhite
+        Ctl3D = False
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clNavy
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        MaxLength = 35
+        ParentCtl3D = False
+        ParentFont = False
+        TabOrder = 0
+        TextHint = 'NCM'
+        OnKeyDown = edtNCMKeyDown
+        OnKeyPress = edtNCMKeyPress
+      end
+      object BtnBuscaNCM: TButton
+        Left = 685
+        Top = 30
+        Width = 27
+        Height = 25
+        Caption = '...'
+        TabOrder = 1
+        OnClick = BtnBuscaNCMClick
+      end
+      object edtOrigem: TEdit
+        Left = 15
+        Top = 61
+        Width = 196
+        Height = 23
+        CharCase = ecUpperCase
+        Color = clWhite
+        Ctl3D = False
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clNavy
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        MaxLength = 35
+        ParentCtl3D = False
+        ParentFont = False
+        TabOrder = 2
+        TextHint = 'Origem'
+        OnEnter = edtOrigemEnter
+        OnKeyDown = edtOrigemKeyDown
+        OnKeyPress = edtOrigemKeyPress
+      end
+      object BtnBuscaOrigem: TButton
+        Left = 217
+        Top = 61
+        Width = 27
+        Height = 25
+        Caption = '...'
+        TabOrder = 3
+        OnClick = BtnBuscaOrigemClick
+      end
+      object edtDestino: TEdit
+        Left = 250
+        Top = 61
+        Width = 196
+        Height = 23
+        CharCase = ecUpperCase
+        Color = clWhite
+        Ctl3D = False
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clNavy
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        MaxLength = 35
+        ParentCtl3D = False
+        ParentFont = False
+        TabOrder = 4
+        TextHint = 'Destino'
+        OnEnter = edtDestinoEnter
+        OnKeyDown = edtDestinoKeyDown
+        OnKeyPress = edtDestinoKeyPress
+      end
+      object BtnBuscaDestino: TButton
+        Left = 452
+        Top = 61
+        Width = 27
+        Height = 25
+        Caption = '...'
+        TabOrder = 5
+        OnClick = BtnBuscaDestinoClick
+      end
+      object BtnBuscaCFOP: TButton
+        Left = 685
+        Top = 61
+        Width = 27
+        Height = 25
+        Caption = '...'
+        TabOrder = 7
+        OnClick = BtnBuscaCFOPClick
+      end
+      object edtCFOP: TEdit
+        Left = 485
+        Top = 61
+        Width = 196
+        Height = 23
+        CharCase = ecUpperCase
+        Color = clWhite
+        Ctl3D = False
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clNavy
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        MaxLength = 35
+        ParentCtl3D = False
+        ParentFont = False
+        TabOrder = 6
+        TextHint = 'CFOP'
+        OnEnter = edtCFOPEnter
+        OnExit = edtCFOPExit
+        OnKeyDown = edtCFOPKeyDown
+        OnKeyPress = edtCFOPKeyPress
+      end
+    end
+    object GroupBox1: TGroupBox
+      Left = 1
+      Top = 105
+      Width = 736
+      Height = 111
+      Align = alTop
+      Caption = 'Situa'#231#227'o tribut'#225'ria'
+      TabOrder = 1
+      ExplicitWidth = 732
+      object edtCSTICMS: TEdit
+        Left = 15
+        Top = 25
+        Width = 666
+        Height = 19
+        CharCase = ecUpperCase
+        Color = clWhite
+        Ctl3D = False
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        MaxLength = 35
+        ParentCtl3D = False
+        ParentFont = False
+        TabOrder = 0
+        TextHint = 'CST ICMS'
+        OnEnter = edtCSTICMSEnter
+        OnExit = edtCSTICMSExit
+        OnKeyDown = edtCSTICMSKeyDown
+        OnKeyPress = edtCSTICMSKeyPress
+      end
+      object btnCSTICMS: TButton
+        Left = 687
+        Top = 24
+        Width = 27
+        Height = 21
+        Caption = '...'
+        TabOrder = 1
+        OnClick = btnCSTICMSClick
+      end
+      object edtCSOSN: TEdit
+        Left = 15
+        Top = 50
+        Width = 666
+        Height = 19
+        CharCase = ecUpperCase
+        Color = clWhite
+        Ctl3D = False
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        MaxLength = 35
+        ParentCtl3D = False
+        ParentFont = False
+        TabOrder = 2
+        TextHint = 'CSOSN'
+        OnEnter = edtCSOSNEnter
+        OnExit = edtCSOSNExit
+        OnKeyDown = edtCSOSNKeyDown
+        OnKeyPress = edtCSOSNKeyPress
+      end
+      object btnCSOSN: TButton
+        Left = 687
+        Top = 49
+        Width = 27
+        Height = 21
+        Caption = '...'
+        TabOrder = 3
+        OnClick = btnCSOSNClick
+      end
+      object checkVendaPDV: TCheckBox
+        Left = 15
+        Top = 75
+        Width = 218
+        Height = 17
+        Caption = 'Utilizar como venda no PDV'
+        TabOrder = 4
+      end
+    end
+    object PageControl1: TPageControl
+      Left = 1
+      Top = 216
+      Width = 736
+      Height = 254
+      ActivePage = TabSheet1
+      Align = alClient
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+      ExplicitWidth = 732
+      ExplicitHeight = 253
+      object TabSheet1: TTabSheet
+        Caption = 'ICMS'
+        object GroupBox2: TGroupBox
+          Left = 3
+          Top = 3
+          Width = 454
+          Height = 230
+          Caption = 'ICMS'
+          TabOrder = 0
+          object edtAliqICMS: TEdit
+            Left = 28
+            Top = 33
+            Width = 411
+            Height = 19
+            Hint = 'Aliquota de ICMS'
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ImeName = 'Portuguese (Brazilian ABNT)'
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 0
+            TextHint = '% Aliquota '
+            OnKeyPress = edtAliqICMSKeyPress
+          end
+          object edtReducao: TEdit
+            Left = 28
+            Top = 58
+            Width = 411
+            Height = 19
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 1
+            TextHint = '% Redu'#231#227'o'
+            OnExit = edtReducaoExit
+            OnKeyPress = edtReducaoKeyPress
+          end
+          object edtAliqReduzida: TEdit
+            Left = 28
+            Top = 84
+            Width = 411
+            Height = 19
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 2
+            TextHint = '% Aliquota Reduzida'
+            OnChange = edtAliqReduzidaChange
+            OnKeyPress = edtAliqReduzidaKeyPress
+          end
+          object edtFCP: TEdit
+            Left = 28
+            Top = 110
+            Width = 411
+            Height = 19
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 3
+            TextHint = '% fundo de combate a pobreza'
+            OnKeyPress = edtFCPKeyPress
+          end
+          object edtICMSDif: TEdit
+            Left = 28
+            Top = 135
+            Width = 411
+            Height = 19
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 4
+            TextHint = '% ICMS DIFERENCIADO'
+            OnKeyPress = edtICMSDifKeyPress
+          end
+          object checkMonofasico: TCheckBox
+            Left = 28
+            Top = 160
+            Width = 146
+            Height = 17
+            Caption = 'Produto Monofasico'
+            TabOrder = 5
+            OnKeyPress = checkMonofasicoKeyPress
+          end
+        end
+        object GroupBox3: TGroupBox
+          Left = 463
+          Top = 3
+          Width = 235
+          Height = 230
+          Caption = 'Substitui'#231#227'o Tribut'#225'ria'
+          TabOrder = 1
+          object edtMVANormal: TEdit
+            Left = 20
+            Top = 33
+            Width = 197
+            Height = 19
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 0
+            TextHint = '% MVA NORMAL'
+            OnKeyPress = edtMVANormalKeyPress
+          end
+          object edtMVASimples: TEdit
+            Left = 20
+            Top = 58
+            Width = 197
+            Height = 19
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 1
+            TextHint = '% MVA SIMPLES'
+            OnExit = edtMVASimplesExit
+            OnKeyPress = edtMVASimplesKeyPress
+          end
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'PIS/COFINS'
+        ImageIndex = 1
+        OnEnter = TabSheet2Enter
+        object GroupBox4: TGroupBox
+          Left = 0
+          Top = 0
+          Width = 728
+          Height = 224
+          Align = alClient
+          Caption = 'Pis e Cofins'
+          TabOrder = 0
+          object edtCSTE: TEdit
+            Left = 11
+            Top = 33
+            Width = 666
+            Height = 19
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 0
+            TextHint = 'cst de pis e cofins entrada'
+            OnExit = edtCSTEExit
+            OnKeyDown = edtCSTEKeyDown
+            OnKeyPress = edtCSTEKeyPress
+          end
+          object btnCSTE: TButton
+            Left = 679
+            Top = 32
+            Width = 27
+            Height = 21
+            Caption = '...'
+            TabOrder = 1
+            OnClick = btnCSTEClick
+          end
+          object edtCSTS: TEdit
+            Left = 11
+            Top = 59
+            Width = 666
+            Height = 19
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 2
+            TextHint = 'cst de pis e cofins sa'#237'da'
+            OnEnter = edtCSTSEnter
+            OnExit = edtCSTSExit
+            OnKeyDown = edtCSTSKeyDown
+            OnKeyPress = edtCSTSKeyPress
+          end
+          object btnCSTS: TButton
+            Left = 679
+            Top = 58
+            Width = 27
+            Height = 21
+            Caption = '...'
+            TabOrder = 3
+            OnClick = btnCSTSClick
+          end
+          object edtAliqPis: TEdit
+            Left = 11
+            Top = 85
+            Width = 330
+            Height = 19
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 4
+            TextHint = 'Aliquota de pis'
+            OnKeyPress = edtAliqPisKeyPress
+          end
+          object edtAliqCofins: TEdit
+            Left = 347
+            Top = 85
+            Width = 330
+            Height = 19
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 5
+            TextHint = 'Aliquota de cofins'
+            OnExit = edtAliqCofinsExit
+            OnKeyPress = edtAliqCofinsKeyPress
+          end
+        end
+      end
+      object TabSheet3: TTabSheet
+        Caption = 'IPI'
+        ImageIndex = 2
+        object GroupBox5: TGroupBox
+          Left = 0
+          Top = 0
+          Width = 728
+          Height = 224
+          Align = alClient
+          Caption = 'IPI'
+          TabOrder = 0
+          object edtIPI: TEdit
+            Left = 11
+            Top = 33
+            Width = 666
+            Height = 19
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 0
+            TextHint = 'CODIGO IPI'
+            OnEnter = edtIPIEnter
+            OnExit = edtIPIExit
+            OnKeyDown = edtIPIKeyDown
+            OnKeyPress = edtIPIKeyPress
+          end
+          object btnConsIPI: TButton
+            Left = 679
+            Top = 32
+            Width = 27
+            Height = 21
+            Caption = '...'
+            TabOrder = 1
+            OnClick = btnConsIPIClick
+          end
+          object edtAliqIPI: TEdit
+            Left = 11
+            Top = 58
+            Width = 666
+            Height = 19
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 2
+            TextHint = '% aliquota de ipi'
+            OnKeyPress = edtAliqIPIKeyPress
+          end
+          object edtANP: TEdit
+            Left = 11
+            Top = 83
+            Width = 330
+            Height = 19
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 3
+            TextHint = 'codigo anp'
+            OnKeyPress = edtANPKeyPress
+          end
+          object edtGLP: TEdit
+            Left = 347
+            Top = 83
+            Width = 330
+            Height = 19
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 4
+            TextHint = '% glp'
+            OnKeyPress = edtGLPKeyPress
+          end
+          object edtGNN: TEdit
+            Left = 11
+            Top = 108
+            Width = 330
+            Height = 19
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 5
+            TextHint = '% GNN'
+            OnKeyPress = edtGNNKeyPress
+          end
+          object edtGNI: TEdit
+            Left = 347
+            Top = 108
+            Width = 330
+            Height = 19
+            CharCase = ecUpperCase
+            Color = clWhite
+            Ctl3D = False
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clNavy
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 35
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 6
+            TextHint = '% GNI'
+            OnExit = edtGNIExit
+            OnKeyPress = edtGNIKeyPress
+          end
+        end
+      end
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 471
+    Width = 738
+    Height = 94
+    Align = alBottom
+    TabOrder = 1
+    ExplicitTop = 470
+    ExplicitWidth = 734
+    object SpeedButton1: TSpeedButton
+      Left = 15
+      Top = 6
+      Width = 80
+      Height = 78
+      Caption = 'F5  | Gravar'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      Glyph.Data = {
+        361B0000424D361B000000000000360000002800000030000000300000000100
+        180000000000001B0000BB010000BB0100000000000000000000FFFFFFFFFFFF
+        FBFAF9D9CEC2AB8E768D6A487C522D7C522D7C522D7C522D7C522D7C522D7C52
+        2D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C
+        522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D
+        7C522D7C522D7C522F9C7B5FEDE8E3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFDFCFCCCBBAD86613E7C522D7C522D7C522D7C
+        522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D
+        7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C52
+        2D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7E532FDFD5CBFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFD5CC
+        8F6C4C7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C52
+        2D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C
+        522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D
+        7C522D7C522D7C522D7C522DDED4CAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFAF8F7B399857C522D7C522E9B7B5EDACEC4FFFFFFFF
+        FFFFFFFFFFDED3CA7C522D7C522D9A7654F7E4CAF7E4CAF7E4CAF7E4CAF7E4CA
+        F7E4CAF7E4CAF7E4CAF7E4CAF7E4CAF7E4CAF7E4CAF7E4CAF7E4CAF7E4CAF7E4
+        CAF7E4CAF7E4CAF7E4CAF7E4CAF7E4CAF7E4CA9B76547C522D7C522DDED4CAFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF1ECE9A1836A
+        7C522D845D3ACEBEB0FEFEFEFFFFFFFFFFFFFFFFFFDED3CA7C522D7C522D9B77
+        55FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFA
+        E8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CE
+        FAE8CE9C78557C522D7C522DDED4CAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFEDE7E299795C7C522D8D6848E1D7CEFFFFFFFFFFFFFF
+        FFFFFFFFFFDED3CA7C522D7C522D9B7755FAE8CEFAE8CEFAE8CEFAE8CEFAE8CE
+        FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8
+        CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CE9C78557C522D7C522DDED4CAFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFDED3CA7C522D7C522D8962
+        3DB19170B19170B19170B19170B19170B19170B19170B19170B19170B19170B1
+        9170B19170B19170B19170CDB394F1DEC3FAE8CEFAE8CEFAE8CEFAE8CEFAE8CE
+        FAE8CE9C78557C522D7C522DDED4CAFFFFFFFFFFFFFFFFFFFFFFFFFEFEFDE3DB
+        D3C3B19FE9E2DBFEFEFEECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFDED3CA7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D
+        7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D845C38CCB2
+        94FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CE9C78557C522D7C522DDED4CAFF
+        FFFFFFFFFFFFFFFFFFFFFFF0ECE897775A7C522EAA8E77F5F2EFECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFDED3CA7C522D7C522D7C52
+        2D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C
+        522D7C522D7C522D7C522D865E3ACFB597FAE8CEFAE8CEFAE8CEFAE8CEFAE8CE
+        FAE8CE9C78557C522D7C522DDED4CAFFFFFFFFFFFFFFFFFFFFFFFFE3DAD38E6A
+        4B7C522D99795CEEE8E2ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFDED3CA7C522D7C522D8F6845C8AC8EC8AC8EC8AC8EC8AC8EC8AC8E
+        C8AC8EC8AC8EC8AC8EC8AC8EC8AC8EC8AC8EC8AC8EC8AC8EC8AC8EE2CCAFF9E6
+        CCFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CE9C78557C522D7C522DDED4CAFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1ECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFDED3CA7C522D7C522D9B77
+        55FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFA
+        E8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CE
+        FAE8CE9C78557C522D7C522DDED4CAFFFFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A
+        4B7C522D97775AEDE7E1ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFDED3CA7C522D7C522D9B7755FAE8CEFAE8CEFAE8CEFAE8CEFAE8CE
+        FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8
+        CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CE9C78557C522D7C522DDED4CAFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1ECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFDED3CA7C522D7C522D926C
+        49D4BC9ED4BC9ED4BC9ED4BC9ED4BC9ED6BDA0E3CCB0F6E3C9FAE8CEFAE8CEFA
+        E8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CE
+        FAE8CE9C78557C522D7C522DDED4CAFFFFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A
+        4B7C522D97775AEDE7E1ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFDED3CA7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D
+        7D532E8E6945DDC6AAFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8
+        CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CE9C78557C522D7C522DDED4CAFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1ECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFDED3CA7C522D7C522D7C52
+        2D7C522D7C522D7C522D7C522D7C522D7C522D7E542FD4BA9DFAE8CEFAE8CEFA
+        E8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CE
+        FAE8CE9C78557C522D7C522DDED4CAFFFFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A
+        4B7C522D97775AEDE7E1ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFDED3CA7C522D7C522D855D39A17E5CA17E5CA17E5CA17E5CA17E5C
+        A3815FC2A586F2DEC3FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8
+        CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CE9C78557C522D7C522DDED4CAFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1ECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFDED3CA7C522D7C522D9B77
+        55FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFA
+        E8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CE
+        FAE8CE9C78557C522D7C522DDED4CAFFFFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A
+        4B7C522D97775AEDE7E1ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFDED3CA7C522D7C522D9B7755FAE8CEFAE8CEFAE8CEFAE8CEFAE8CE
+        FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8
+        CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CE9C78557C522D7C522DDED4CAFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1ECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFDED3CA7C522D7C522D865E
+        3AA58361A58361A58361A58361A58361A58361A58361A58361A58361A58361A5
+        8361A58361A58361A58361A58361A58361A58361A58361A58361A58361A58361
+        A58361865E3A7C522D7C522DDED4CAFFFFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A
+        4B7C522D97775AEDE7E1ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFE0D5CC7E54307C522D7C522D7C522D7C522D7C522D7C522D7C522D
+        7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C52
+        2D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7F5430E0D6CDFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1ECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFEBE5DF9472547C522D7C52
+        2D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C
+        522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D
+        7C522D7C522D7C522D957354EBE5DFFFFFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A
+        4B7C522D97775AEDE7E1ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFF5F2EFDCD1C7D7CABED7CABED7CABED7CABED7CABED7CABE
+        D7CABED7CABED7CABED7CABED7CABED7CABED7CABED7CABED7CABED7CABED7CA
+        BED7CABED7CABED7CABED7CABED7CABED7CABED7CABEDDD1C7F6F3F0FFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1ECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A
+        4B7C522D97775AEDE7E1ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1ECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A
+        4B7C522D97775AEDE7E1ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1ECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A
+        4B7C522D97775AEDE7E1ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1ECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A
+        4B7C522D97775AEDE7E1ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1ECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A
+        4B7C522D97775AEDE7E1ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1ECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFEFEFDF9F7F6F9F7F5F9F7F5F9F7F5F9F7F5F9F7F5F9F7F5F9F7F5F9F7F5F9
+        F7F5F9F7F5F9F7F5F9F7F5F9F7F5F9F7F5F9F7F5F9F7F5F9F7F5F9F7F5F9F7F6
+        FEFDFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A
+        4B7C522D97775AEDE7E1ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFE3DAD39470537C522E7C522D7C522D7C522D
+        7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C52
+        2D7C522D7C522D7C522D7C522D7C522F927151E4DBD3FFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1ECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC2AE
+        9D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C
+        522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D
+        7C522DC2AF9DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A
+        4B7C522D97775AEDE7E1ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFB9A38F7C522D7C522D7F5631815934815934
+        8159348159348159348159348159348159348159348159348159348159348159
+        348159348159348159347F56317C522D7C522DB9A38FFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1ECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB9A3
+        8F7C522D7C522DC2A586FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFA
+        E8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEC2A5867C522D
+        7C522DB9A38FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A
+        4B7C522D97775AEDE7E1ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFB9A38F7C522D7C522DC2A586FAE8CEFAE8CE
+        FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8
+        CEFAE8CEFAE8CEFAE8CEC2A5867C522D7C522DB9A38FFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1ECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB9A3
+        8F7C522D7C522DC2A586FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFA
+        E8CEFAE8CEFAE8CEFAE8CEF0DCC1D4BA9CEAD4B9FAE8CEFAE8CEC2A5867C522D
+        7C522DB9A38FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A
+        4B7C522D97775AEDE7E1ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFB9A38F7C522D7C522DC2A586FAE8CEFAE8CE
+        FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEA3805F7C52
+        2D8D6643F8E5CBFAE8CEC2A5867C522D7C522DB9A38FFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1ECE6E199785A
+        7C522D8E6A4BE2D9D1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB9A3
+        8F7C522D7C522DC2A586FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFA
+        E8CEFAE8CEFAE8CEFAE8CE88613E7C522D7C522DEFDBC1FAE8CEC2A5867C522D
+        7C522DB9A38FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A
+        4B7C522D97775AEDE7E1ECE6E199785A7C522D8E6A4BE2D9D1FFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFB9A38F7C522D7C522DC2A586FAE8CEFAE8CE
+        FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CE87603C7C52
+        2D7C522DEEDABFFAE8CEC2A5867C522D7C522DB9A38FFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFE2D9D18E6A4B7C522D97775AEDE7E1EDE7E29A795D
+        7C522D8D6848E1D7CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB9A3
+        8F7C522D7C522DC2A586FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFA
+        E8CEFAE8CEFAE8CEFAE8CE87603C7C522D7C522DEEDABFFAE8CEC2A5867C522D
+        7C522DB9A38FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE1D7CF8E69
+        4A7C522D99785CEDE8E2F2EDE9A285697C522D845D3ACFBFB1FFFFFEFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFB9A38F7C522D7C522DC2A586FAE8CEFAE8CE
+        FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CE87603C7C52
+        2D7C522DEEDABFFAE8CEC2A5867C522D7C522DB9A38FFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFEFECFBFB2845D3C7C522DA3856BF2EEEAFAF8F6B39985
+        7C522D7C522E9B7B60DACEC4FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB9A3
+        8F7C522D7C522DC2A586FAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFAE8CEFA
+        E8CEFAE8CEFAE8CEFAE8CE87603C7C522D7C522DEEDABFFAE8CEC2A5867C522D
+        7C522DB9A38FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFEFEDACDC39B7B5E7C52
+        2E7C522DB39B85FAF8F7FFFFFFDFD5CC8F6B4B7C522D7C522D7C522D7C522D7C
+        522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D
+        7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C52
+        2D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C
+        522D7C522D7C522D7C522D7C522D7C522D906C4BDED4CBFFFFFFFFFFFFFDFCFB
+        CBBBAC8862407C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C52
+        2D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C
+        522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D
+        7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D8862
+        40CCBBADFDFCFCFFFFFFFFFFFFFFFFFFFCFBFAD9CEC2AA8E768D68487C522D7C
+        522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D
+        7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C52
+        2D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C522D7C
+        522D7C522D7C522D8D6848A88E76D9CEC3FCFBFAFFFFFFFFFFFF}
+      Layout = blGlyphTop
+      ParentFont = False
+      OnClick = SpeedButton1Click
+    end
+    object SpeedButton2: TSpeedButton
+      Left = 101
+      Top = 5
+      Width = 80
+      Height = 80
+      Caption = 'Esc | Sair'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      Glyph.Data = {
+        361B0000424D361B000000000000360000002800000030000000300000000100
+        180000000000001B0000130B0000130B00000000000000000000FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFAF9F8EBE9E4DEDBD3D6D1C7CBC5B9CAC1B4C4
+        C0B2C4C0B2CAC1B4CBC5B9D6D1C7DEDBD3EBE9E4FAFAF8FFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFAF9E6E3DED0CCC1C3BCAE
+        C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BE
+        B0C5BEB0C3BCAED2CABFE7E4DEFBFAF9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9F9
+        F7DFDBD2C5C1B1C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5
+        BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C7C1B1
+        DFDBD4FAF9F8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFEFEFDE4E1DBC7C1B1C5BEB0C5BEB0C5BEB0C5BEB0C4BDB2
+        D3CEC3E2DED7EDEAE6F5F4F2FAFAF9FDFDFDFDFDFDFAFAF9F5F4F2ECEAE6E2DE
+        D7D3CDC3C4BDB2C5BEB0C5BEB0C5BEB0C5BEB0C8BFB4E5E2DBFEFEFEFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7F6F4D0C9BFC5BEB0C5BE
+        B0C5BEB0C5BEB0D0CABFE7E4DEFBFAF9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFAF9E7E4DECFCABDC5BEB0
+        C5BEB0C5BEB0C5BEB0D0CBBFF7F6F4FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFEDEBE6C8BFB2C5BEB0C5BEB0C5BEB0CDC8BEEDEBE7FFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFEDEBE7CFC9BCC5BEB0C5BEB0C5BEB0C6C2B2ED
+        EBE7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE8E5DFC3BFB1C5BEB0C5BEB0C7C0B0E4E1
+        DBFEFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FEFEFDE4E1DAC4C0B2C5BEB0C5BEB0C6BFB1E8E6E0FFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE8E5DFC5
+        BEB0C5BEB0C5BEB0CDC7BBF4F2F0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF3F2EFCDC6B8C5BEB0C5
+        BEB0C5BEB0E8E6E0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFEDEAE6C3BFB1C5BEB0C5BEB0D1CBC0FAFAF8FFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFAF9F8D0CBBFC5BEB0C5BEB0C6BFB1EDEBE7FFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6F5F3C8BFB4C5BEB0C5
+        BEB0D1CABFFCFCFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCFCFBD0
+        CBBFC5BEB0C5BEB0C6C2B2F7F6F4FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFEFEFDD0CABFC5BEB0C5BEB0CDC7BBFAFAF8FFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAF9F8CDC6B8C5BEB0C5BEB0D0CBBFFEFE
+        FEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE4E1DAC5BEB0C5BEB0C7C0B0F4
+        F3F0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFF3F2EFC4C0B2C5BEB0C5BEB0E5E2DBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        F9F8F7C7C1B1C5BEB0C5BEB0E5E2DBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFC8CBFCA4A9FAC7CBFCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFEFFC5C9FCA4A9FAC9CDFC
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE4E1DAC5BEB0C5BEB0C8BF
+        B4FAF9F8FFFFFFFFFFFFFFFFFFFFFFFFDEDAD2C5BEB0C5BEB0CEC9BEFEFEFEFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFEFF7B82F83643F43643F43643F4777FF8
+        FAFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFF9FAFF737DF73643F43643F43643F47F88F7FFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFEFEFDCFC9BCC5BEB0C5BEB0DFDBD4FFFFFFFFFFFFFFFFFFFBFAF9
+        C5C1B1C5BEB0C5BEB0EEECE8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC4C8
+        FC3643F43643F43643F43643F43643F4737DF7FAFBFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFF9FAFF707AF73643F43643F43643F43643F4
+        3643F4C9CDFCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEDEBE7C5BEB0C5BE
+        B0C7C1B1FBFAF9FFFFFFFFFFFFE6E3DDC5BEB0C5BEB0D0C9BFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFA0A6FA3643F43643F43643F43643F43643F4
+        3643F4737CF7FAFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9FAFF707A
+        F73643F43643F43643F43643F43643F43643F4A4A9FAFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFCFCABDC5BEB0C5BEB0E7E4DEFFFFFFFFFFFFD1CABF
+        C5BEB0C5BEB0E8E5DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC0C4
+        FC3643F43643F43643F43643F43643F43643F43643F4737CF7FAFBFFFFFFFFFF
+        FFFFFFFFFFFFFFFFF9FAFF707AF73643F43643F43643F43643F43643F43643F4
+        3643F4C5C9FCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE7E4DEC5BE
+        B0C5BEB0D2CABFFFFFFFFAF9F8C5BEB0C5BEB0C4C0B2FBFBFAFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFEFF707AF63643F43643F43643F43643F4
+        3643F43643F43643F4727AF7FAFBFFFFFFFFFFFFFFF9FAFF707AF73643F43643
+        F43643F43643F43643F43643F43643F4737DF7FEFEFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFBFAF9C4BDB2C5BEB0C3BCAEFAFAF8EBE8E3C5BEB0
+        C5BEB0D3CDC4FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFF9F9FF6E77F63643F43643F43643F43643F43643F43643F43643F4727AF7FA
+        FBFFF9FAFF707AF73643F43643F43643F43643F43643F43643F43643F4707AF7
+        F9FAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3CD
+        C3C5BEB0C5BEB0EBE9E4DDD9D2C5BEB0C5BEB0E2DFD8FFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9F9FF6E77F63643F43643F4
+        3643F43643F43643F43643F43643F4707AF7707AF73643F43643F43643F43643
+        F43643F43643F43643F4707AF7F9FAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFE2DED7C5BEB0C5BEB0DEDBD3D5D0C6C5BEB0
+        C5BEB0EDEBE7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFF9F9FF6E77F63643F43643F43643F43643F43643F43643F436
+        43F43643F43643F43643F43643F43643F43643F43643F4707AF7F9FAFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFECEA
+        E6C5BEB0C5BEB0D6D1C7CDC7BBC5BEB0C5BEB0F6F5F2FFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9F9FF6E77F6
+        3643F43643F43643F43643F43643F43643F43643F43643F43643F43643F43643
+        F43643F4707AF7F9FAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFF5F4F2C5BEB0C5BEB0CBC5B9C7C3B6C5BEB0
+        C5BEB0FBFAF9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFF9F9FF6E77F63643F43643F43643F43643F436
+        43F43643F43643F43643F43643F43643F4707AF7F9FAFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAFA
+        F9C5BEB0C5BEB0CAC1B4C4BDB2C5BEB0C5BEB0FEFDFDFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        F9F9FF6E77F63643F43643F43643F43643F43643F43643F43643F43643F4707A
+        F7F9FAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFDC5BEB0C5BEB0C4C0B2C4BDB2C5BEB0
+        C5BEB0FEFDFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9F9FF6E77F63643F43643F43643F436
+        43F43643F43643F43643F43643F4707AF7FAFBFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFD
+        FDC5BEB0C5BEB0C4C0B2C7C3B6C5BEB0C5BEB0FBFAF9FFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9FAFF
+        6F77F63643F43643F43643F43643F43643F43643F43643F43643F43643F43643
+        F4727AF7FAFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFAFAF9C5BEB0C5BEB0CAC1B4CDC7BBC5BEB0
+        C5BEB0F6F5F3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFF9FAFF6F77F63643F43643F43643F43643F43643F436
+        43F43643F43643F43643F43643F43643F43643F4727AF7FAFBFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5F4
+        F2C5BEB0C5BEB0CBC5B9D5D0C6C5BEB0C5BEB0EDEBE7FFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9FAFF7079F63643F4
+        3643F43643F43643F43643F43643F43643F43643F43643F43643F43643F43643
+        F43643F43643F4727AF7FAFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFEDEAE6C5BEB0C5BEB0D6D1C7DEDAD2C5BEB0
+        C5BEB0E2DFD8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFF9FAFF7079F63643F43643F43643F43643F43643F43643F43643F46F
+        77F66E77F63643F43643F43643F43643F43643F43643F43643F4737CF7FAFBFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE2DE
+        D7C5BEB0C5BEB0DEDBD3EBE8E3C5BEB0C5BEB0D4CEC4FFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9FAFF707AF63643F43643F43643F4
+        3643F43643F43643F43643F47079F6F9FAFFF9F9FF6E77F63643F43643F43643
+        F43643F43643F43643F43643F4737DF7FAFBFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFD3CEC3C5BEB0C5BEB0EBE9E4F9F9F7C5BEB0
+        C5BEB0C4C0B2FBFBFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFE
+        FF737CF73643F43643F43643F43643F43643F43643F43643F47079F6F9FAFFFF
+        FFFFFFFFFFF9F9FF6E77F63643F43643F43643F43643F43643F43643F43643F4
+        777FF8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFAF9C4BD
+        B2C5BEB0C3BCAEFAF9F8FFFFFFD1CBC0C5BEB0C5BEB0E8E5DFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFC2C6FC3643F43643F43643F43643F43643F4
+        3643F43643F47079F6F9FAFFFFFFFFFFFFFFFFFFFFFFFFFFF9F9FF6E77F63643
+        F43643F43643F43643F43643F43643F43643F4C7CBFCFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFE7E4DEC5BEB0C5BEB0D0CCC1FFFFFFFFFFFFE6E3DD
+        C5BEB0C5BEB0CFCABEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA0A6
+        FA3643F43643F43643F43643F43643F43643F4707AF6F9FAFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFF9F9FF6E77F63643F43643F43643F43643F43643F4
+        3643F4A4A9FAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0CABFC5BE
+        B0C5BEB0E6E3DEFFFFFFFFFFFFFAFAF9C5BEB3C5BEB0C5BEB0EEECE8FFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFC2C6FC3643F43643F43643F43643F43643F4
+        707AF6F9FAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9F9
+        FF6E77F63643F43643F43643F43643F43643F4C8CBFCFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFEDEBE7C5BEB0C5BEB0C5C1B1FBFAF9FFFFFFFFFFFFFFFFFF
+        DEDAD2C5BEB0C5BEB0D0CABFFEFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFE
+        FF777FF83643F43643F43643F4737DF7F9FAFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9F9FF707AF63643F43643F43643F4
+        7B82F8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFEFECDC8BEC5BEB0C5BE
+        B0DFDBD2FFFFFFFFFFFFFFFFFFFFFFFFF9F8F6C5C1B1C5BEB0C5BEB0E5E2DCFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFEFFC2C6FCA0A6FAC2C6FCFEFEFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFDFEFFC0C4FCA0A6FAC4C8FCFEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFE4E1DBC5BEB0C5BEB0C7C1B1F9F9F7FFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFE3E0D9C5BEB0C5BEB0C7BEB2F4F3F0FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4F2F0C7C0B0C5BEB0C5BEB0E4E1
+        DBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFDFDCFCABDC5BEB0C5BEB0CB
+        C5B9FAFAF9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA
+        FAF8CDC7BBC5BEB0C5BEB0D0C9BFFEFEFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFF6F5F3C8BFB4C5BEB0C5BEB0CFCCC0FCFCFBFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFCFCFBD1CBC0C5BEB0C5BEB0C8BFB2F7F6F4FFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFECEAE5C3BFB1C5
+        BEB0C5BEB0CFCCC0FAFAF9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAFAF8D1CBC0C5
+        BEB0C5BEB0C3BFB1EDEBE6FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFE7E4DEC5BEB0C5BEB0C5BEB0CBC5B9F4F3F0FFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFF4F3F0CDC7BBC5BEB0C5BEB0C5BEB0E8E5DFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE7
+        E4DEC3BFB1C5BEB0C5BEB0C7BEB2E5E2DCFEFEFEFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFEFEE5E1DBC7C0B0C5BEB0C5BEB0C3
+        BFB1E8E5DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFECEAE5C8BFB4C5BEB0C5BEB0C5BE
+        B0D0CABFEEECE8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEEECE8
+        CEC9BEC5BEB0C5BEB0C5BEB0C8BFB4EDEAE6FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFF6F5F3CFCABDC5BEB0C5BEB0C5BEB0C5BEB0CFCABEE8E5DFFBFBFA
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFBFBFAE8E5DFD0C9BFC5BEB0C5BEB0C5BEB0C5BEB0D0CABFF6F5F3FF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFDFDE3E0D9C5C1
+        B1C5BEB0C5BEB0C5BEB0C5BEB0C4C0B2D4CEC4E2DFD8EDEBE7F6F5F3FBFAF9FE
+        FDFDFEFDFDFBFAF9F6F5F2EDEBE7E2DFD8D3CDC4C4C0B2C5BEB0C5BEB0C5BEB0
+        C5BEB0C7C1B1E4E1DAFEFEFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFF9F8F6DEDAD2C5BEB3C5BEB0C5BEB0C5BEB0
+        C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BE
+        B0C5BEB0C5BEB0C5BEB0C5BEB0C5C1B1DEDAD2F9F8F7FFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFAFAF9E6E3DDD1CBC0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5
+        BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0C5BEB0D1CABFE6E3DDFBFAF9
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9F9F7
+        EBE8E3DEDAD2D5D0C6CDC7BBC7C3B6C4BDB2C4BDB2C7C3B6CDC7BBD5D0C6DDD9
+        D2EBE8E3FAF9F8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+      Layout = blGlyphTop
+      ParentFont = False
+      OnClick = btnCancelarClick
+    end
+  end
+  object qryNCM: TFDQuery
+    Connection = Dados.Conexao
+    Transaction = Dados.Transacao
+    UpdateTransaction = Dados.Transacao
+    SQL.Strings = (
+      'select * from ibpt')
+    Left = 557
+    Top = 379
+    object qryNCMCODIGO: TStringField
+      FieldName = 'CODIGO'
+      Origin = 'CODIGO'
+      Required = True
+      Size = 30
+    end
+    object qryNCMEX: TStringField
+      FieldName = 'EX'
+      Origin = 'EX'
+      Size = 6
+    end
+    object qryNCMTIPO: TStringField
+      FieldName = 'TIPO'
+      Origin = 'TIPO'
+      Size = 10
+    end
+    object qryNCMDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Origin = 'DESCRICAO'
+      Size = 255
+    end
+    object qryNCMNACIONALFEDERAL: TStringField
+      FieldName = 'NACIONALFEDERAL'
+      Origin = 'NACIONALFEDERAL'
+      Size = 18
+    end
+    object qryNCMIMPORTADOSFEDERAL: TStringField
+      FieldName = 'IMPORTADOSFEDERAL'
+      Origin = 'IMPORTADOSFEDERAL'
+      Size = 19
+    end
+    object qryNCMESTADUAL: TStringField
+      FieldName = 'ESTADUAL'
+      Origin = 'ESTADUAL'
+      Size = 11
+    end
+    object qryNCMMUNICIPAL: TStringField
+      FieldName = 'MUNICIPAL'
+      Origin = 'MUNICIPAL'
+      Size = 12
+    end
+    object qryNCMVIGENCIAINICIO: TStringField
+      FieldName = 'VIGENCIAINICIO'
+      Origin = 'VIGENCIAINICIO'
+      Size = 15
+    end
+    object qryNCMVIGENCIAFIM: TStringField
+      FieldName = 'VIGENCIAFIM'
+      Origin = 'VIGENCIAFIM'
+      Size = 13
+    end
+    object qryNCMCHAVE: TStringField
+      FieldName = 'CHAVE'
+      Origin = 'CHAVE'
+      Size = 12
+    end
+    object qryNCMVERSAO: TStringField
+      FieldName = 'VERSAO'
+      Origin = 'VERSAO'
+      Size = 11
+    end
+    object qryNCMFONTE: TStringField
+      FieldName = 'FONTE'
+      Origin = 'FONTE'
+      Size = 30
+    end
+  end
+  object qryTribNCM: TFDQuery
+    DetailFields = 'NCM'
+    Connection = Dados.Conexao
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    SQL.Strings = (
+      'select * from tb_tribncm where NCM =:pNCM '
+      'AND ORIGEM =:pOrigem '
+      'AND DESTINO =:pDestino '
+      'AND CFOP =:pCFOP'
+      'AND EMPRESA =:pEmpresa')
+    Left = 501
+    Top = 347
+    ParamData = <
+      item
+        Name = 'PNCM'
+        DataType = ftString
+        ParamType = ptInput
+        Size = 10
+        Value = Null
+      end
+      item
+        Name = 'PORIGEM'
+        DataType = ftString
+        ParamType = ptInput
+        Size = 2
+      end
+      item
+        Name = 'PDESTINO'
+        DataType = ftString
+        ParamType = ptInput
+        Size = 2
+      end
+      item
+        Name = 'PCFOP'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'PEMPRESA'
+        DataType = ftSmallint
+        ParamType = ptInput
+      end>
+    object qryTribNCMEMPRESA: TSmallintField
+      FieldName = 'EMPRESA'
+      Origin = 'EMPRESA'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryTribNCMNCM: TStringField
+      FieldName = 'NCM'
+      Origin = 'NCM'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      Size = 10
+    end
+    object qryTribNCMORIGEM: TStringField
+      FieldName = 'ORIGEM'
+      Origin = 'ORIGEM'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      Size = 2
+    end
+    object qryTribNCMDESTINO: TStringField
+      FieldName = 'DESTINO'
+      Origin = 'DESTINO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      Size = 2
+    end
+    object qryTribNCMCFOP: TIntegerField
+      FieldName = 'CFOP'
+      Origin = 'CFOP'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryTribNCMCSOSN: TStringField
+      FieldName = 'CSOSN'
+      Origin = 'CSOSN'
+      Size = 5
+    end
+    object qryTribNCMCSTICMS: TStringField
+      FieldName = 'CSTICMS'
+      Origin = 'CSTICMS'
+      Size = 5
+    end
+    object qryTribNCMALIQ_ICMS: TCurrencyField
+      FieldName = 'ALIQ_ICMS'
+      KeyFields = 'ALIQ_ICMS'
+      Origin = 'ALIQ_ICMS'
+      Required = True
+      currency = False
+    end
+    object qryTribNCMICMS_DIFERIDO: TFMTBCDField
+      FieldName = 'ICMS_DIFERIDO'
+      Origin = 'ICMS_DIFERIDO'
+      Required = True
+      Precision = 18
+      Size = 4
+    end
+    object qryTribNCMREDUCAO_BASE: TFMTBCDField
+      FieldName = 'REDUCAO_BASE'
+      Origin = 'REDUCAO_BASE'
+      Required = True
+      Precision = 18
+      Size = 2
+    end
+    object qryTribNCMALIQ_REDUZIDA: TCurrencyField
+      FieldName = 'ALIQ_REDUZIDA'
+      Origin = 'ALIQ_REDUZIDA'
+      Required = True
+      currency = False
+    end
+    object qryTribNCMFCP: TFMTBCDField
+      FieldName = 'FCP'
+      Origin = 'FCP'
+      Required = True
+      Precision = 18
+      Size = 2
+    end
+    object qryTribNCMMVA: TFMTBCDField
+      FieldName = 'MVA'
+      Origin = 'MVA'
+      Required = True
+      Precision = 18
+      Size = 2
+    end
+    object qryTribNCMMVA_NORMAL: TFMTBCDField
+      FieldName = 'MVA_NORMAL'
+      Origin = 'MVA_NORMAL'
+      Required = True
+      Precision = 18
+      Size = 4
+    end
+    object qryTribNCMCSTE: TStringField
+      FieldName = 'CSTE'
+      Origin = 'CSTE'
+      Size = 5
+    end
+    object qryTribNCMCSTS: TStringField
+      FieldName = 'CSTS'
+      Origin = 'CSTS'
+      Size = 5
+    end
+    object qryTribNCMALIQ_PIS: TCurrencyField
+      FieldName = 'ALIQ_PIS'
+      Origin = 'ALIQ_PIS'
+      Required = True
+      currency = False
+    end
+    object qryTribNCMALIQ_COF: TCurrencyField
+      FieldName = 'ALIQ_COF'
+      Origin = 'ALIQ_COF'
+      Required = True
+      currency = False
+    end
+    object qryTribNCMTRIBUTACAO_MONOFASICA: TStringField
+      FieldName = 'TRIBUTACAO_MONOFASICA'
+      Origin = 'TRIBUTACAO_MONOFASICA'
+      Size = 1
+    end
+    object qryTribNCMCSTIPI: TStringField
+      FieldName = 'CSTIPI'
+      Origin = 'CSTIPI'
+      Size = 5
+    end
+    object qryTribNCMALIQ_IPI: TFMTBCDField
+      FieldName = 'ALIQ_IPI'
+      Origin = 'ALIQ_IPI'
+      Required = True
+      Precision = 18
+      Size = 2
+    end
+    object qryTribNCMANP: TStringField
+      FieldName = 'ANP'
+      Origin = 'ANP'
+    end
+    object qryTribNCMGLP: TFMTBCDField
+      FieldName = 'GLP'
+      Origin = 'GLP'
+      Required = True
+      Precision = 18
+      Size = 4
+    end
+    object qryTribNCMGNN: TFMTBCDField
+      FieldName = 'GNN'
+      Origin = 'GNN'
+      Required = True
+      Precision = 18
+      Size = 4
+    end
+    object qryTribNCMGNI: TFMTBCDField
+      FieldName = 'GNI'
+      Origin = 'GNI'
+      Required = True
+      Precision = 18
+      Size = 4
+    end
+    object qryTribNCMISSQN: TFMTBCDField
+      FieldName = 'ISSQN'
+      Origin = 'ISSQN'
+      Required = True
+      Precision = 18
+      Size = 4
+    end
+    object qryTribNCMVENDA_PDV: TStringField
+      FieldName = 'VENDA_PDV'
+      Origin = 'VENDA_PDV'
+      Size = 1
+    end
+  end
+  object dsTribNCM: TDataSource
+    DataSet = qryTribNCM
+    Left = 213
+    Top = 387
+  end
+  object qryCSTICMS: TFDQuery
+    Connection = Dados.Conexao
+    SQL.Strings = (
+      
+        'select * from (select CODIGO,DESCRICAO,CODIGO  || '#39' - '#39' || DESCR' +
+        'ICAO as CST from cst_icms ) a')
+    Left = 533
+    Top = 307
+    object qryCSTICMSCODIGO: TStringField
+      FieldName = 'CODIGO'
+      Origin = 'CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      Size = 3
+    end
+    object qryCSTICMSDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Origin = 'DESCRICAO'
+      Size = 100
+    end
+    object qryCSTICMSCST: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'CST'
+      Origin = 'CST'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 106
+    end
+  end
+  object qryCSOSN: TFDQuery
+    Connection = Dados.Conexao
+    SQL.Strings = (
+      
+        'select * from (select CODIGO,DESCRICAO,CODIGO  || '#39' - '#39' || DESCR' +
+        'ICAO as CSOSN from csosn ) a')
+    Left = 604
+    Top = 318
+    object qryCSOSNCODIGO: TStringField
+      FieldName = 'CODIGO'
+      Origin = 'CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      Size = 3
+    end
+    object qryCSOSNDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Origin = 'DESCRICAO'
+      Size = 60
+    end
+    object qryCSOSNCSOSN: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'CSOSN'
+      Origin = 'CSOSN'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 66
+    end
+  end
+  object qryPisCofins: TFDQuery
+    Connection = Dados.Conexao
+    SQL.Strings = (
+      
+        'select * from (select CODIGO,DESCRICAO,UPPER(CODIGO  || '#39' - '#39' ||' +
+        ' DESCRICAO) as PISCOFINS, TIPO from cts_pis_cofins) a')
+    Left = 325
+    Top = 403
+    object qryPisCofinsCODIGO: TStringField
+      FieldName = 'CODIGO'
+      Origin = 'CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      Size = 2
+    end
+    object qryPisCofinsDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Origin = 'DESCRICAO'
+      Size = 80
+    end
+    object qryPisCofinsPISCOFINS: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'PISCOFINS'
+      Origin = 'PISCOFINS'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 85
+    end
+    object qryPisCofinsTIPO: TStringField
+      FieldName = 'TIPO'
+      Origin = 'TIPO'
+      Size = 1
+    end
+  end
+  object qryCSTIPI: TFDQuery
+    Connection = Dados.Conexao
+    SQL.Strings = (
+      ''
+      
+        'select * from (select CODIGO,DESCRICAO,UPPER(CODIGO  || '#39' - '#39' ||' +
+        ' DESCRICAO) as CSTIPI, TIPO from cst_ipi) a')
+    Left = 445
+    Top = 427
+    object qryCSTIPICODIGO: TStringField
+      FieldName = 'CODIGO'
+      Origin = 'CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      Size = 2
+    end
+    object qryCSTIPIDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Origin = 'DESCRICAO'
+      Size = 80
+    end
+    object qryCSTIPICSTIPI: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'CSTIPI'
+      Origin = 'CSTIPI'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 85
+    end
+    object qryCSTIPITIPO: TStringField
+      FieldName = 'TIPO'
+      Origin = 'TIPO'
+      Size = 1
+    end
+  end
+  object tblTribNCM: TFDTable
+    IndexFieldNames = 'EMPRESA;NCM;ORIGEM;DESTINO;CFOP'
+    Connection = Dados.Conexao
+    Transaction = Dados.Transacao
+    UpdateTransaction = Dados.Transacao
+    UpdateOptions.UpdateTableName = 'tb_tribncm'
+    TableName = 'tb_tribncm'
+    Left = 509
+    Top = 403
+    object tblTribNCMEMPRESA: TSmallintField
+      FieldName = 'EMPRESA'
+      Origin = 'EMPRESA'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object tblTribNCMNCM: TStringField
+      FieldName = 'NCM'
+      Origin = 'NCM'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      Size = 10
+    end
+    object tblTribNCMORIGEM: TStringField
+      FieldName = 'ORIGEM'
+      Origin = 'ORIGEM'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      Size = 2
+    end
+    object tblTribNCMDESTINO: TStringField
+      FieldName = 'DESTINO'
+      Origin = 'DESTINO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      Size = 2
+    end
+    object tblTribNCMCFOP: TIntegerField
+      FieldName = 'CFOP'
+      Origin = 'CFOP'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object tblTribNCMCSOSN: TStringField
+      FieldName = 'CSOSN'
+      Origin = 'CSOSN'
+      Size = 5
+    end
+    object tblTribNCMCSTICMS: TStringField
+      FieldName = 'CSTICMS'
+      Origin = 'CSTICMS'
+      Size = 5
+    end
+    object tblTribNCMALIQ_ICMS: TCurrencyField
+      FieldName = 'ALIQ_ICMS'
+      Origin = 'ALIQ_ICMS'
+      Required = True
+    end
+    object tblTribNCMICMS_DIFERIDO: TFMTBCDField
+      FieldName = 'ICMS_DIFERIDO'
+      Origin = 'ICMS_DIFERIDO'
+      Required = True
+      Precision = 18
+      Size = 4
+    end
+    object tblTribNCMREDUCAO_BASE: TFMTBCDField
+      FieldName = 'REDUCAO_BASE'
+      Origin = 'REDUCAO_BASE'
+      Required = True
+      Precision = 18
+      Size = 2
+    end
+    object tblTribNCMALIQ_REDUZIDA: TCurrencyField
+      FieldName = 'ALIQ_REDUZIDA'
+      Origin = 'ALIQ_REDUZIDA'
+      Required = True
+    end
+    object tblTribNCMFCP: TFMTBCDField
+      FieldName = 'FCP'
+      Origin = 'FCP'
+      Required = True
+      Precision = 18
+      Size = 2
+    end
+    object tblTribNCMMVA: TFMTBCDField
+      FieldName = 'MVA'
+      Origin = 'MVA'
+      Required = True
+      Precision = 18
+      Size = 2
+    end
+    object tblTribNCMMVA_NORMAL: TFMTBCDField
+      FieldName = 'MVA_NORMAL'
+      Origin = 'MVA_NORMAL'
+      Required = True
+      Precision = 18
+      Size = 4
+    end
+    object tblTribNCMCSTE: TStringField
+      FieldName = 'CSTE'
+      Origin = 'CSTE'
+      Size = 5
+    end
+    object tblTribNCMCSTS: TStringField
+      FieldName = 'CSTS'
+      Origin = 'CSTS'
+      Size = 5
+    end
+    object tblTribNCMALIQ_PIS: TCurrencyField
+      FieldName = 'ALIQ_PIS'
+      Origin = 'ALIQ_PIS'
+      Required = True
+    end
+    object tblTribNCMALIQ_COF: TCurrencyField
+      FieldName = 'ALIQ_COF'
+      Origin = 'ALIQ_COF'
+      Required = True
+    end
+    object tblTribNCMTRIBUTACAO_MONOFASICA: TStringField
+      FieldName = 'TRIBUTACAO_MONOFASICA'
+      Origin = 'TRIBUTACAO_MONOFASICA'
+      Size = 1
+    end
+    object tblTribNCMCSTIPI: TStringField
+      FieldName = 'CSTIPI'
+      Origin = 'CSTIPI'
+      Size = 5
+    end
+    object tblTribNCMALIQ_IPI: TFMTBCDField
+      FieldName = 'ALIQ_IPI'
+      Origin = 'ALIQ_IPI'
+      Required = True
+      Precision = 18
+      Size = 2
+    end
+    object tblTribNCMANP: TStringField
+      FieldName = 'ANP'
+      Origin = 'ANP'
+    end
+    object tblTribNCMGLP: TFMTBCDField
+      FieldName = 'GLP'
+      Origin = 'GLP'
+      Required = True
+      Precision = 18
+      Size = 4
+    end
+    object tblTribNCMGNN: TFMTBCDField
+      FieldName = 'GNN'
+      Origin = 'GNN'
+      Required = True
+      Precision = 18
+      Size = 4
+    end
+    object tblTribNCMGNI: TFMTBCDField
+      FieldName = 'GNI'
+      Origin = 'GNI'
+      Required = True
+      Precision = 18
+      Size = 4
+    end
+    object tblTribNCMISSQN: TFMTBCDField
+      FieldName = 'ISSQN'
+      Origin = 'ISSQN'
+      Required = True
+      Precision = 18
+      Size = 4
+    end
+    object tblTribNCMVENDA_PDV: TStringField
+      FieldName = 'VENDA_PDV'
+      Origin = 'VENDA_PDV'
+      Size = 1
+    end
+  end
+  object qryVendaPDV: TFDQuery
+    Connection = Dados.Conexao
+    SQL.Strings = (
+      
+        'select * from tb_tribncm where ncm =:pNCM and origem=:pOrigem an' +
+        'd destino =:pDestino and venda_pdv = '#39'S'#39';')
+    Left = 229
+    Top = 418
+    ParamData = <
+      item
+        Name = 'PNCM'
+        DataType = ftString
+        ParamType = ptInput
+        Size = 10
+        Value = Null
+      end
+      item
+        Name = 'PORIGEM'
+        DataType = ftString
+        ParamType = ptInput
+        Size = 2
+      end
+      item
+        Name = 'PDESTINO'
+        DataType = ftString
+        ParamType = ptInput
+        Size = 2
+      end>
+  end
+end

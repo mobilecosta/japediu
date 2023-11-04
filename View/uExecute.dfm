@@ -1,0 +1,469 @@
+object frmExecute: TfrmExecute
+  Left = 0
+  Top = 0
+  Caption = 'frmExecute'
+  ClientHeight = 647
+  ClientWidth = 908
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OnCreate = FormCreate
+  TextHeight = 13
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 908
+    Height = 647
+    ActivePage = TabSheet4
+    Align = alClient
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    Visible = False
+    object TabSheet4: TTabSheet
+      Caption = 'Novos Campos'
+      ImageIndex = 3
+      object MemoNovo: TMemo
+        Left = 0
+        Top = 0
+        Width = 900
+        Height = 619
+        Align = alClient
+        CharCase = ecUpperCase
+        Lines.Strings = (
+          'ALTER TABLE VENDAS_TERMINAIS ADD BOBINA_58_PADRAO VARCHAR(1);'
+          ''
+          'ALTER TABLE VENDAS_TERMINAIS ADD BOBINA_58_COZINHA VARCHAR(1);'
+          ''
+          'ALTER TABLE VENDAS_TERMINAIS ADD BOBINA_58_BAR VARCHAR(1);'
+          ''
+          'ALTER TABLE OS_MASTER ADD CEP VARCHAR(10);'
+          ''
+          
+            'ALTER TABLE OS_MASTER ADD REPARO BLOB SUB_TYPE 1 SEGMENT SIZE 32' +
+            '762;'
+          ''
+          
+            'ALTER TABLE VENDAS_TERMINAIS ADD TERMINAL_FORCA_VENDAS VARCHAR(1' +
+            ');'
+          ''
+          'ALTER TABLE VENDAS_TERMINAIS ADD TERMINAL_PDV_MESA VARCHAR(1);'
+          ''
+          
+            'ALTER TABLE VENDAS_TERMINAIS ADD TERMINAL_PDV_DELIVERY VARCHAR(1' +
+            ');'
+          ''
+          'ALTER TABLE VENDAS_TERMINAIS ADD TERMINAL_WHATSAPP VARCHAR(1);'
+          ''
+          'ALTER TABLE VENDAS_TERMINAIS ADD TERMINAL_SPED VARCHAR(1);'
+          ''
+          'ALTER TABLE VENDAS_TERMINAIS ADD TERMINAL_NFE VARCHAR(1);'
+          ''
+          'ALTER TABLE VENDAS_TERMINAIS ADD TERMINAL_NFCE VARCHAR(1);'
+          ''
+          'ALTER TABLE VENDAS_TERMINAIS ADD TERMINAL_SAT VARCHAR(1);'
+          ''
+          'ALTER TABLE VENDAS_TERMINAIS ADD TERMINAL_CTE VARCHAR(1);'
+          ''
+          'ALTER TABLE VENDAS_TERMINAIS ADD TERMINAL_MDF VARCHAR(1);'
+          ''
+          'ALTER TABLE VENDAS_TERMINAIS ADD TERMINAL_FISCAL VARCHAR(1);'
+          ''
+          'ALTER TABLE VENDAS_TERMINAIS ADD TERMINAL_ENCARTE VARCHAR(1);'
+          ''
+          'ALTER TABLE EMPRESA ADD MODULO_FORCA_VENDAS VARCHAR(1);'
+          ''
+          'ALTER TABLE EMPRESA ADD MODULO_PDV_MESA VARCHAR(1);'
+          ''
+          'ALTER TABLE EMPRESA ADD MODULO_PDV_DELIVERY VARCHAR(1);'
+          ''
+          'ALTER TABLE EMPRESA ADD MODULO_WHATSAPP VARCHAR(1);'
+          ''
+          'ALTER TABLE EMPRESA ADD MODULO_SPED VARCHAR(1);'
+          ''
+          'ALTER TABLE EMPRESA ADD MODULO_NFE VARCHAR(1);'
+          ''
+          'ALTER TABLE EMPRESA ADD MODULO_NFCE VARCHAR(1);'
+          ''
+          'ALTER TABLE EMPRESA ADD MODULO_SAT VARCHAR(1);'
+          ''
+          'ALTER TABLE EMPRESA ADD MODULO_CTE VARCHAR(1);'
+          ''
+          'ALTER TABLE EMPRESA ADD MODULO_MDF VARCHAR(1);'
+          ''
+          'ALTER TABLE EMPRESA ADD MODULO_FISCAL VARCHAR(1);'
+          ''
+          
+            'ALTER TABLE VENDAS_TERMINAIS ADD TERMINAL_ORDEM_SERVICO VARCHAR(' +
+            '1);'
+          ''
+          'ALTER TABLE EMPRESA ADD MODULO_ORDEM_SERVICO VARCHAR(1);'
+          ''
+          'ALTER TABLE VENDAS_TERMINAIS ADD TERMINAL_BOLETO VARCHAR(1);'
+          ''
+          'ALTER TABLE EMPRESA ADD TELA_BOAS_VINDAS VARCHAR(1);'
+          ''
+          'ALTER TABLE EMPRESA ADD MODULO_BOLETO VARCHAR(1);'
+          ''
+          
+            'ALTER TABLE CONFIG ADD LOGO_SPLASH BLOB SUB_TYPE 0 SEGMENT SIZE ' +
+            '64;'
+          ''
+          'ALTER TABLE CONFIG ADD SPLASH_FUNDO VARCHAR(20);'
+          ''
+          'ALTER TABLE CONFIG ADD SPLASH_TEXTO VARCHAR(20);'
+          ''
+          'ALTER TABLE CONFIG ADD SPLASH_LETRA VARCHAR(100);'
+          ''
+          'ALTER TABLE CONFIG ADD SPLASH_ICONE_PRETO VARCHAR(1);'
+          ''
+          'ALTER TABLE CONFIG ADD TELEGRAM_ID_TOKEN VARCHAR(100);'
+          ''
+          'ALTER TABLE CONFIG ADD TELEGRAM_ID_CHAT VARCHAR(100);'
+          ''
+          
+            'ALTER TABLE CONFIG ADD MERCADOPAGO_MENSALIDADE_TOKEN VARCHAR(100' +
+            ');'
+          ''
+          'ALTER TABLE CONFIG ADD NOTIFICACAO_EMAIL_EVENTO VARCHAR(100);'
+          ''
+          'ALTER TABLE CONFIG ADD PARCEIRO_RAZAO VARCHAR(100);'
+          ''
+          'ALTER TABLE CONFIG ADD PARCEIRO_CNPJ VARCHAR(20);'
+          ''
+          'ALTER TABLE CONFIG ADD PARCEIRO_SITE VARCHAR(100);'
+          ''
+          'ALTER TABLE CONFIG ADD PARCEIRO_EMAIL VARCHAR(100);'
+          ''
+          'ALTER TABLE CONFIG ADD PARCEIRO_FONE1 VARCHAR(15);'
+          ''
+          'ALTER TABLE CONFIG ADD PARCEIRO_FONE2 VARCHAR(15);'
+          ''
+          'ALTER TABLE CONFIG ADD PARCEIRO_CONTATO VARCHAR(50);')
+        ReadOnly = True
+        ScrollBars = ssVertical
+        TabOrder = 0
+      end
+    end
+    object TabSheet11: TTabSheet
+      Caption = 'Update Dados'
+      ImageIndex = 12
+      object MemoUpdate: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        Lines.Strings = (
+          
+            'ALTER TABLE CONFIG ADD LOGO_ACESSO BLOB SUB_TYPE 0 SEGMENT SIZE ' +
+            '64;'
+          
+            'ALTER TABLE CONFIG ADD LOGO_CABECALHO BLOB SUB_TYPE 0 SEGMENT SI' +
+            'ZE 64;'
+          
+            'ALTER TABLE CONFIG ADD BACKGROUND BLOB SUB_TYPE 0 SEGMENT SIZE 6' +
+            '4;'
+          'ALTER TABLE CONFIG ADD BARRA_SUPERIOR VARCHAR(20);'
+          'ALTER TABLE CONFIG ADD BARRA_INFERIOR VARCHAR(20);'
+          ''
+          'COMMIT WORK;')
+        ReadOnly = True
+        ScrollBars = ssVertical
+        TabOrder = 0
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Tabela IPI'
+      ImageIndex = 3
+      object MemoIPI: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object TabSheet5: TTabSheet
+      Caption = 'Tabela CSOSN'
+      ImageIndex = 4
+      object MemoCSOSN: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object TabSheet6: TTabSheet
+      Caption = 'Tabela PIS Cofins'
+      ImageIndex = 5
+      object MemoPIS: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object TabSheet8: TTabSheet
+      Caption = 'Tabela ICMS'
+      ImageIndex = 7
+      object MemoICMS: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object TabSheet10: TTabSheet
+      Caption = 'Tabela CST ICMS'
+      ImageIndex = 12
+      object MemoCstICMS: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object TabPaises: TTabSheet
+      Caption = 'TabPaises'
+      ImageIndex = 13
+      object MemoPaises: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object TabFPG: TTabSheet
+      Caption = 'TabFPG'
+      ImageIndex = 14
+      object MemoFPG: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object TabDesoneracao: TTabSheet
+      Caption = 'TabDesoneracao'
+      ImageIndex = 15
+      object MemoDesoneracao: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object TabSheet9: TTabSheet
+      Caption = 'Consulta'
+      ImageIndex = 11
+      object MemoConsulta: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object memo: TTabSheet
+      Caption = 'Atualiza'
+      ImageIndex = 9
+      object MemoSql: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object TabSheet14: TTabSheet
+      Caption = 'Telas'
+      ImageIndex = 18
+      object MemoTela: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object TabSheet15: TTabSheet
+      Caption = 'NFe Adicionais'
+      ImageIndex = 19
+      object MemoNFe: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object TabSheet16: TTabSheet
+      Caption = 'Gatilhos'
+      ImageIndex = 20
+      object MemoGatilho: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object TabSheetPlano: TTabSheet
+      Caption = 'Plano'
+      ImageIndex = 21
+      object MemoPlano: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object TabSheet17: TTabSheet
+      Caption = 'Descricao'
+      ImageIndex = 22
+      object MemoDescricaoPlano: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object TabSheet13: TTabSheet
+      Caption = 'XML Detail'
+      ImageIndex = 21
+      object MemoDetail: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object TabSheet18: TTabSheet
+      Caption = 'CEST'
+      ImageIndex = 22
+      object memCEST: TMemo
+        Left = 0
+        Top = 0
+        Width = 904
+        Height = 620
+        Align = alClient
+        CharCase = ecUpperCase
+        ReadOnly = True
+        ScrollBars = ssVertical
+        TabOrder = 0
+      end
+    end
+  end
+  object qryParametro: TFDQuery
+    Connection = Dados.Conexao
+    SQL.Strings = (
+      'select * from CONFIG')
+    Left = 374
+    Top = 88
+    object qryParametroVERSAO: TIntegerField
+      FieldName = 'VERSAO'
+      Origin = 'VERSAO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryParametroDATA_SCRIPT: TDateField
+      FieldName = 'DATA_SCRIPT'
+      Origin = 'DATA_SCRIPT'
+    end
+    object qryParametroESTILO: TStringField
+      FieldName = 'ESTILO'
+      Origin = 'ESTILO'
+      Size = 30
+    end
+    object qryParametroLINK_TREINAMENTO: TStringField
+      FieldName = 'LINK_TREINAMENTO'
+      Origin = 'LINK_TREINAMENTO'
+      Size = 200
+    end
+    object qryParametroTITULO_SISTEMA: TStringField
+      FieldName = 'TITULO_SISTEMA'
+      Origin = 'TITULO_SISTEMA'
+      Size = 50
+    end
+    object qryParametroSUB_TITULO_SISTEMA: TStringField
+      FieldName = 'SUB_TITULO_SISTEMA'
+      Origin = 'SUB_TITULO_SISTEMA'
+      Size = 100
+    end
+    object qryParametroEMAIL_SUPORTE: TStringField
+      FieldName = 'EMAIL_SUPORTE'
+      Origin = 'EMAIL_SUPORTE'
+      Size = 100
+    end
+    object qryParametroSITE: TStringField
+      FieldName = 'SITE'
+      Origin = 'SITE'
+      Size = 100
+    end
+    object qryParametroFONE1: TStringField
+      FieldName = 'FONE1'
+      Origin = 'FONE1'
+      Size = 14
+    end
+    object qryParametroFONE2: TStringField
+      FieldName = 'FONE2'
+      Origin = 'FONE2'
+      Size = 14
+    end
+    object qryParametroCONTATO: TStringField
+      FieldName = 'CONTATO'
+      Origin = 'CONTATO'
+      Size = 14
+    end
+  end
+  object qryConsulta: TFDQuery
+    Connection = Dados.Conexao
+    Left = 438
+    Top = 87
+  end
+  object IBScript: TFDScript
+    SQLScripts = <>
+    Connection = Dados.Conexao
+    ScriptOptions.IgnoreError = True
+    Params = <>
+    Macros = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    Left = 318
+    Top = 87
+  end
+end
